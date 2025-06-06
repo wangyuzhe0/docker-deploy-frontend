@@ -1,26 +1,78 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Try to add you score</h1>
-    <p class="lead">You may add your socore to see how your grade will?</p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
-      <form class="form-inline">
-          <div class="form-group mb-2">
-            <label for="staticEmail2" class="sr-only"></label>
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter your score">
-          </div>
-          <div class="form-group mx-sm-3 mb-2">
-            <label for="inputPassword2" class="sr-only">Password</label>
-            <input [(ngModel)]="score" name="score" type="text" class="form-control" id="score" placeholder="Score...">
-          </div>
-          <button type="submit" class="btn btn-primary mb-2" (click)="getGrade()">Submit</button>
-        </form>
-  </div>
-  <div *ngIf="showOutput" class="col-md-6">
-    You grade is 
-    <button type="button" [class]=outputClass>{{grade}}</button>
-  </div>
-</div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的自我介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>myself</h1>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="我的照片">
+            <h2>Wangyuzhe041028</h2>
+        </div>
+            <ul>
+                <li>1220605412@qq.com</li>
+                <li>13373599544</li>
+                <li>china yinchuan</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 你的名字</p>
+    </div>
+</body>
+</html>
